@@ -11,7 +11,7 @@ class Luhn:
         if self.is_valid: return self.is_valid
 
         self.is_valid = False
-        
+
         match = re.search(r"^\d{2,}$", self.card_num.replace(' ', '') )
 
         if match:
