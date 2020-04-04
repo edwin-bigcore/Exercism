@@ -11,7 +11,6 @@ def json_io(func):
         return json.dumps(func(self, url, payload), indent=2)
     return dec
 
-
 class User(object):
     def __init__(self, name, owed_by=None, owes=None, **kwargs):
         self.name = name
@@ -47,7 +46,6 @@ class User(object):
             'owed_by': self.owed_by,
             'balance': self.balance
         }
-
 
 class RestAPI(object):
     def __init__(self, database=None):

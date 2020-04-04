@@ -1,7 +1,6 @@
 import sqlite3
 import json
 
-
 class IOUDatabase:
     ''' I Owe You Database 
     '''
@@ -149,7 +148,7 @@ class IOUDatabase:
             value = record[2] - ( record[3] or 0 )
             if value > 0:
                 result += [{'account': record[1], 'amount' : value }]
-        
+
         return result
 
     def u_user_balance(self, account, balance):
